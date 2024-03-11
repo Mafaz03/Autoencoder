@@ -43,6 +43,6 @@ class Autoencoder(nn.Module):
       return self.decoder(self.encoder(x))
 
 
-model = Autoencoder()
-criterion = nn.MSELoss()
-optimizer = torch.optim.Adam(model.parameters(), lr=1e-3, weight_decay=1e-5)
+model = Autoencoder()  #initialize model
+criterion = nn.MSELoss()  # Loss
+optimizer = torch.optim.Adam(model.parameters(), lr=1e-3, weight_decay=1e-5) # Optimizer
